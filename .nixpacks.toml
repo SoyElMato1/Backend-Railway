@@ -1,2 +1,0 @@
-[phases.setup]
-apt_pkgs = ["libmysqlclient-dev", "gcc", "python3-dev", "musl-dev"]
