@@ -94,14 +94,14 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 # mysql://root:fdmseQHTljsGUmYRLxKdPLjbxHNRLHom@autorack.proxy.rlwy.net:36857/railway
-
+# mysql://root:qqWvnoTMyCSrXzRCczyyoJJEjcHzBmTd@junction.proxy.rlwy.net:55590/railway
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'HOST': 'autorack.proxy.rlwy.net',
-        'PORT': '36857',
+        'HOST': 'junction.proxy.rlwy.net',
+        'PORT': '55590',
         'USER': 'root',
-        'PASSWORD': 'fdmseQHTljsGUmYRLxKdPLjbxHNRLHom',
+        'PASSWORD': 'qqWvnoTMyCSrXzRCczyyoJJEjcHzBmTd',
         'NAME': 'railway', #base de datos
     }
 }
