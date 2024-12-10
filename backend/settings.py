@@ -159,6 +159,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
+
 CSRF_TRUSTED_ORIGINS = ['http://*','https://greenmarket.up.railway.app']
 
 AUTH_USER_MODEL = 'ModeloGreenMarket.User'
