@@ -113,7 +113,7 @@ class Proveedor(models.Model):
     apellido = models.CharField(max_length=50)
     verificacion = models.BooleanField(default=False)
     direccion = models.CharField(max_length=200, null=True, blank=True)
-    foto = models.ImageField(upload_to='proveedor_images/', null=True, blank=True)  # Campo de imagen
+    foto = models.ImageField(upload_to='media/proveedor_images/', null=True, blank=True)  # Campo de imagen
 
     def save(self, *args, **kwargs):
         # Codificar la contraseña si no está codificada aún
@@ -201,7 +201,7 @@ class Producto (models.Model):
     codigo_producto = models.AutoField(primary_key=True)
     nombre_producto = models.CharField(max_length=50)
     precio = models.IntegerField()
-    imagen_producto = models.ImageField(upload_to='producto_images/', null=True, blank=True)
+    imagen_producto = models.ImageField(upload_to='media/producto_images/', null=True, blank=True)
     descripcion = models.CharField(max_length=300)
     id_categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
     id_proveedor = models.ForeignKey(Proveedor, on_delete=models.CASCADE)
