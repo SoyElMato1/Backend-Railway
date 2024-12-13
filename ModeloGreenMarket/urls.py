@@ -24,6 +24,7 @@ urlpatterns = [
 #Proveedor
     path('provee/', Ver_proveedor, name='proveedor'),
     path('proveedores/<int:id>/', proveedor_detalle, name='proveedor_detalle'),
+    path('proveedores_por_producto/', proveedores_por_producto, name='proveedores_por_producto'),
 
 # Carrito
     path('agregar/<int:producto_id>/', agregar_al_carrito, name='agregar_al_carrito'),
@@ -47,9 +48,12 @@ urlpatterns = [
     path('detalles-pago-exitoso/', detalles_pago_exitoso, name='detalles_pago_exitoso'),
 
 #Login 
-    path('login/', login_view, name='admin_login'),
+    path('login/', login_view, name='login'),
     path('logout/', logout_view, name='logout'),
     path('registro_proveedor/', register_proveedor_view, name='registro proveedor'),
+    path('verify_2fa_code/', verify_2fa_code, name='verify_2fa_code'),
+    path('request_password/', request_password, name='request_password'),
+    path('reset_password/', reset_password, name='reset_password'),
 
 #bot
     path('analizar_imagen/', analizar_imagen, name='analizar_imagen'),
