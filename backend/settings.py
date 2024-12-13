@@ -167,7 +167,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
-DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
+STORAGES = {
+    'default': {
+        'BACKEND': 'django.core.files.storage.FileSystemStorage',  # O el backend que uses
+    }
+}
 
 CSRF_TRUSTED_ORIGINS = ['http://*','https://greenmarket.up.railway.app']
 
