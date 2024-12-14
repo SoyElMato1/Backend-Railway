@@ -109,7 +109,7 @@ def pago_exitoso(request):
             orden_date = parse_datetime(response['transaction_date'])
             )
             # Redirigir a la ruta de Angular con el resultado de la transacción
-            return redirect(f'https://glowing-ganache-e8d4ac.netlify.app/pago-exitoso?order={response["buy_order"]}')
+            return redirect(f'http://localhost:8100/pago-exitoso?order={response["buy_order"]}')
         else:
             # En caso de que la transacción no sea autorizada
             return redirect('pago_fallido')
@@ -177,4 +177,4 @@ def detalles_pago_exitoso(request):
 @permission_classes([AllowAny])
 def pago_fallido(request):
     # Aquí puedes hacer cualquier lógica que necesites antes de redirigir
-    return redirect('https://glowing-ganache-e8d4ac.netlify.app/pago-fallido?message=El%20pago%20fue%20cancelado%20o%20fallido.%20Int%C3%A9ntalo%20de%20nuevo.')
+    return redirect('http://localhost:8100/pago-fallido?message=El%20pago%20fue%20cancelado%20o%20fallido.%20Int%C3%A9ntalo%20de%20nuevo.')
